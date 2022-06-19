@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  overflow-x: hidden;
+}
+
+.page {
+  margin-block: 19rem 19rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 19.2rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.timer span {
+  font-weight: 500;
+  font-size: 12.6rem;
+  color: hsl(240, 6%, 21%);
+  margin-bottom: 1.7rem;
+}
+
+.timer .buttons {
+  display: flex;
+  gap: 4rem;
+}
+
+.timer .buttons button {
+  background: none;
+  border: none;
+}
+
+.timer .hide {
+  display: none;
+  visibility: hidden;
+}
+
+.sounds {
+  display: grid;
+  gap: 3.2rem;
+  grid-template-areas: 
+    "forest rain"
+    "coffee fire"; 
+}
+
+.sounds button {
+  background: hsl(240, 9%, 89%);
+  border-radius: 2.4rem;
+  padding: 4.8rem;
+  border: none;
+  transition: 0.5s;
+}
+
+.sounds .card.active button {
+  background: hsl(194, 97%, 31%)
+}
+
+.sounds .card.active button svg path {
+  fill: #FFFFFF;
+}
+
+@media (max-width: 980px) {
+  .page {
+    max-width: 80%;
+    margin-inline: auto;
+    margin-block: 2rem;
+    display: block;
+    text-align: center;
+  }
+  .timer .buttons {
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .sounds {
+    gap: 2rem;
+  }
+}
